@@ -72,8 +72,6 @@ class CameraStream: CDVPlugin, AVCaptureVideoDataOutputSampleBufferDelegate {
     
     func captureOutput(_ output: AVCaptureOutput,  didOutput sampleBuffer: CMSampleBuffer, from connection: AVCaptureConnection) {
         autoreleasepool{
-            print("capturing output")
-
             //change camera orientation to have it point in the right direction
             connection.videoOrientation = AVCaptureVideoOrientation(rawValue: 3)!;
             
